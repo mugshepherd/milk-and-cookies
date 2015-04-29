@@ -20,53 +20,20 @@
 
 
   // Conditionals
-
-    // If number is less than 5 return "Too Small"
-    // If number equals 10 return "Just Right"
-    // If number is greater than 10 return "Too Big"
   var number = 10
-  if (number < 5){
-    console.log("Too Small");
-  }
-  else if (number === 10){
-    console.log("Just Right");
-  }
-  else if (number > 10){
-    console.log("Too Big");
-  }
-  else{
-    console.log("I don't know what to do with this");
-  }
-
+  // If number is less than 10, display "Too Small"
+  // If number equals 10, display "Just Right"
+  // If number is greater than 10, display "Too Big"
 
   // Case/Switch Statements
     // Look Up "Switch"
   var day = 'Tuesday';
   // Make it do what the ruby does.
-   switch (day)
-   {
-     case "Monday":
-     console.log("omg happy coffee forever");
-     break;
-   case "Tuesday":
-     console.log("How was that coffee");
-     break;
-   case "Friday":
-     console.log("I am in love");
-     break;
-   default:
-     console.log("This day does not count");
-   end
-   }
+
 
   // While Loop
   var count = 10;
   // Make it do what the ruby does.
-  var text = "";
-  while (count > 0) {
-    text -= count + "<br>";
-    count -= 1;
-  }
 
 
   ///////////////////////
@@ -75,41 +42,22 @@
 
   // named
   // Create a function named "add" that will add two passed numbers
-  var add = function(num1, num2){
-    return num1 + num2
-  }
 
   // anonymous
   // Create an anonymous function that will multiply two numbers and then set the value returned from that to a variable called multiplied.
 
-var multiply = function(num1, num2){
-  return num1 * num2
-}
-var multiplied = multiply
 
   // Arrays
   var myNameArray  = ['Adam', 'Elaine', 'Tom'];
   // Return the first element of the array
   // Add a new value 'Matt' to the array
-  myNameArray[0];
-  myNameArray.push("Matt");
-
-
 
   // Iteration
   var dwarves = ['Doc', 'Grumpy', 'Happy', 'Sleepy', 'Bashful', 'Sneezy', 'Dopey'];
   // Print out to the console, "Hi Ho! I am" + the dwarfs name
-  for(dwarf in dwarves){
-    console.log("Hi Ho! I am " + dwarves[dwarf])
-  }
 
   // Use the forEach method to iterate over the array and return:
     // dwarf name + "is part of the gang." using both the index and specific value in the array (LOOK UP forEach)!!!
-
-  dwarves.forEach(
-    function isGangster(name) {console.log(dwarves(name) + " is part of the gang");
-    }
-  );
 
 
   ///////////////////
@@ -124,6 +72,7 @@ var multiplied = multiply
     // fly, which will return 'I am like a bird.  I want to fly away.  I dont know where my home is. I dont know where my soul is.'
     // greet, which will return ('Hi my name is' + name)
         // HINT: Look up what the keyword 'this' does in JavaScript
+    // Test these properties & functions by logging the result to the console. 
 
 </script>
 </body>
