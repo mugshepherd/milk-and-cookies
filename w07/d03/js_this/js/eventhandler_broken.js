@@ -44,4 +44,4 @@ var user = {
 // there is no data property on the button object
 
 // Cannot read property '0' of undefined
-$('button').click (user.clickHandler);
+$('button').click (user.js/event_handler_broken.js);
