@@ -1,5 +1,0 @@
-walkingCat();
-
-function walkingCat() {
-
-}
