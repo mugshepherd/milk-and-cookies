@@ -6,4 +6,6 @@ class ApplicationController < ActionController::Base
   def index
     render text: {links: {cards: cards_url}}.to_json
   end
+
+  
 end
