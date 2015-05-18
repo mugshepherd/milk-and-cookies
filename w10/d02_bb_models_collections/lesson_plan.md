@@ -20,6 +20,7 @@ What's the purpose of a front end framework? JS and all of it's many libraries a
 - libraries gives us tools to utilize.
 - abstracts code and allows us to write our code more succinctly
 - allows us to write applications faster and easier
+
 #### frameworks (5m)
 - like libraries in that it gives us tools to utilize
 - additionally they provide structure and conventions users have to follow in order for them to work.
@@ -35,6 +36,7 @@ What's the purpose of a front end framework? JS and all of it's many libraries a
 Individual reading(10m)
 - Go to [backbonejs documentation](http://backbonejs.org/)
   - Read from Getting Started to Backbone.Model
+
 T&T(5m)
 - With what you know about OOJS, jot down some ideas about what you think Backbone is and why you would use it.
 
@@ -42,8 +44,8 @@ T&T(5m)
 ### Backbone
 - a js library that was built to mimic the rMVC structure of Rails
 - router, views, models/collections
-  - organize code into separate components that are able to interact fluidly with each other to build robus, client/browser based web applications
-- not truly a "framework" in that their is much more flexibility and not nearly a rigidly defined structure like rails.
+  - organize code into separate components that are able to interact fluidly with each other to build robust, client/browser based web applications
+- not truly a "framework" in that there is much more flexibility and not nearly a rigidly defined structure like rails.
 - meant be able to be changed/altered/configured to suit your needs
 - provides objects that help separate concerns on the front end
 - provides an interface, API, for communicating with a server back end
@@ -116,7 +118,7 @@ cid?! whats that?
 
 TLDR version: cid is short for client id, cid is assigned by backbone.js client side and is useful if you don't have an actual id.
 
-There's alot of other stuff happening here that backbone's doing but the important part of it is the attributes object nested without our backbone object.
+There's alot of other stuff happening here that backbone's doing but the important part of it is the attributes object nested within our backbone object.
 
 ### Getting and setting attributes
 #### Setting attributes(also updates)
@@ -169,7 +171,7 @@ Reminder = Backbone.Model.extend({
 ```
 
 ## Lunch!
-### In class ex(radio? grumblr?)
+### In class ex(radio)
 
 ### Backbone Collections (60m)
 What is a backbone collection? A collection acts as an intelligent wrapper for like models. It provides a set of methods for performing the CRUD operations on models of the collection.
@@ -193,10 +195,10 @@ How are models added to a collection?
 var reminders = new Reminders([reminder1, reminder2, reminder3])
 
 // set on existing collection
-reminder.set([reminder1, reminder2])
+reminders.set([reminder1, reminder2])
 
 // added to existing collection
-reminder.add(reminder1)
+reminders.add(reminder1)
 ```
 
 #### Getting models from collection
@@ -232,3 +234,13 @@ Collections can use the following:
 - unshift
 - shift
 - length
+
+### "AJAX" with BB
+#### Models
+Remember all that complex ajax stuff we used to get information from a server? Well BB obfuscates all of that for you and makes it much easier. All we have to do is change up our model definition! In `js/models/reminder.js`:
+
+```javascript
+var Reminder = Backbone.Model.extend({
+  urlRoot: "http://localhost:3000/reminders"
+});
+```
