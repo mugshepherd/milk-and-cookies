@@ -9,7 +9,7 @@ var allPokemon = [
     ],
     "stats": {
       "hp": "45",
-      "attack": "49",
+        
       "defense": "49",
       "spattack": "65",
       "spdefense": "65",
