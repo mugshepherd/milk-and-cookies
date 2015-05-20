@@ -11,6 +11,7 @@
   - @media
 */
 
+
 body {
   background-color: #333;
   font: 15px/1.4 Helvetica, Arial, sans-serif;
@@ -33,10 +34,10 @@ a {
   background-size: cover;
 }
 
-  .header img {
-    margin: 20px;
-    width: 30%;
-  }
+.header img {
+  margin: 20px;
+  width: 30%;
+}
 
 .nav {
   background-color: #B00;
@@ -95,3 +96,20 @@ a {
   .breadcrumbs li:first-child:before {
     content: none;
   }
+
+
+
+@media screen and (max-width: 500px) {
+  .nav {
+    display: block;
+    width: auto;  
+  }
+  .nav li { 
+    display: inline-block;
+  }
+  .main {
+    width: auto;
+    float: none;
+    width: auto;
+  }
+}

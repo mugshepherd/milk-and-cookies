@@ -1,4 +1,8 @@
 class RemindersController < ApplicationController
+
+# regular rails app with most CRUD.  only difference is that this is rendering JSON. 
+#status: 200 means "ok" status
+# backend 
   def index
     @reminders = Reminder.all
     render status: 200, json: @reminders.to_json
@@ -10,15 +14,24 @@ class RemindersController < ApplicationController
   end
 
   def create
-    render nothing: true
+    @reminder = Reminder.new(reminder_params)
+    if @reminder.save
+      render json: @reminder.to_json, status: 200
+    end
   end
 
   def update
-    render nothing: true
+    @reminder = Reminder.find(params[:id])
+    if @reminder.update(reminder_params)
+      render json: @reminder.to_json, status: 200
+    end
   end
 
   def destroy
-    render nothing: true
+    @reminder = Reminder.find(params[:id])
+    if @reminder.destroy
+      render json: @reminder.to_json, status: 200
+    end
   end
 
   private
